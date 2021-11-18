@@ -1,0 +1,38 @@
+{
+    "name": "negan-module-counter",
+    "version": "1.0.0",
+    "description": "\"Counter\" functionality. Users count in a specified channel.",
+    "main": "index.js",
+    "scripts": {
+        "build": "rimraf ./build && tsc && ncp ./package.json ./build/package.json && ncp ./README.md ./build/README.md"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/S-K-Lieren/negan-modules.git"
+    },
+    "author": "Ben Kauer",
+    "license": "GPL-2.0-only",
+    "bugs": {
+        "url": "https://github.com/S-K-Lieren/negan-modules/issues"
+    },
+    "homepage": "https://github.com/S-K-Lieren/negan-modules#readme",
+    "peerDependencies": {
+        "negan-bot": "^0.4.0"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.176",
+        "eslint": "^7.28.0",
+        "eslint-plugin-deprecation": "^1.2.1",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-jest": "^24.3.6",
+        "eslint-plugin-jsdoc": "^26.0.2",
+        "eslint-plugin-rxjs": "^3.3.3",
+        "ncp": "^2.0.0",
+        "rimraf": "^3.0.2",
+        "rxjs-tslint": "^0.1.7",
+        "rxjs-tslint-rules": "^4.24.0",
+        "ts-node-dev": "^1.0.0-pre.44",
+        "tsc-watch": "^4.2.3",
+        "typescript": "^4.3.2"
+    }
+}
