@@ -15,7 +15,11 @@ export class HallOfFameModule extends AbstractModule {
     private readonly HALL_OF_FAME_MESSAGES_DB_KEY: string = 'hall-of-fame-message-ids';
     private readonly CHANNEL_ID_DB_KEY: string = 'hall-of-fame-message-channel-id';
     private readonly LIKE_EMOJI: string = '⭐';
-    private readonly THRESHOLD: number = 1;
+    private THRESHOLD: number = 7;
+
+    public setThreshold(threshold: number): void {
+        this.THRESHOLD = threshold;
+    }
 
     protected async handleReaction(reaction: MessageReaction | PartialMessageReaction, next: NextFunction): Promise<void> {
         if (reaction.emoji.name === this.LIKE_EMOJI) {
@@ -107,8 +111,8 @@ export class HallOfFameModule extends AbstractModule {
                             (tuple: MessageTuple) => tuple[1] === embedMsgID
                         );
 
-                            this.hallOfFameMessages.set(msg.guildId as string, filteredResult);
-                            this.saveHallOfFameMessages(msg.guildId as string);
+                        this.hallOfFameMessages.set(msg.guildId as string, filteredResult);
+                        this.saveHallOfFameMessages(msg.guildId as string);
                     });
                 return;
             }
