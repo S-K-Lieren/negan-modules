@@ -1,6 +1,6 @@
 {
     "name": "negan-module-hall-of-fame",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "description": "\"Hall of fame\". Users can \"like\" messages by reacting with :star:. If at least 7 users like a message, it will be reposted into a channel specified by server owner or mod.",
     "main": "index.js",
     "scripts": {
@@ -17,7 +17,7 @@
     },
     "homepage": "https://github.com/S-K-Lieren/negan-modules#readme",
     "peerDependencies": {
-        "negan-bot": "^0.4.0"
+        "negan-bot": "^0.5.0"
     },
     "devDependencies": {
         "@types/lodash": "^4.14.176",

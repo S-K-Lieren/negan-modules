@@ -6,7 +6,8 @@ type MessageTuple = [DiscordID, DiscordID];
 
 @Module({
     name: 'hall-of-fame',
-    alwaysActivated: false
+    alwaysActivated: false,
+    commandPrefix: 'hof'
 })
 export class HallOfFameModule extends AbstractModule {
 
