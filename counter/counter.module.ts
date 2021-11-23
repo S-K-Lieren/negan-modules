@@ -4,7 +4,8 @@ import { AbstractModule, Commands, Module, NextFunction } from 'negan-bot';
 
 @Module({
     name: 'counter',
-    alwaysActivated: false
+    alwaysActivated: false,
+    commandPrefix: 'counter'
 })
 export class CounterModule extends AbstractModule {
 
