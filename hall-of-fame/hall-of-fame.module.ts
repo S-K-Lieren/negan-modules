@@ -48,7 +48,7 @@ export class HallOfFameModule extends AbstractModule {
 
     protected registerCommands(): Commands | undefined {
         return {
-            'set-hall-of-fame-channel': {
+            'set-channel': {
                 onlyMods: true,
                 handler: (msg: Message) => this.setHallOfFameChannel(msg)
             }
